@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+	"name": "Breakify",
+	"description": "Every 90-120 minutes the lights will dim as relaxing music can be chosen by category with the click of a button.",
+	"version": "1.0",
+	"browser_action":
+	{
+		"default_icon": "icon.png",
+		"default_title": "Breakify",
+    		"default_popup": "popup.html"
+	},
+	"permissions":
+	[
+		"activateTab",
+		"tabs",
+  		"bookmarks",
+	  	"http://www.blogger.com/",
+  		"http://*.google.com/",
+  		"unlimitedStorage"
+	]
+
+}
