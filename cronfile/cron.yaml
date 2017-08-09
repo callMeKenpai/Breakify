@@ -1,0 +1,4 @@
+cron:
+- description: "Breakify"
+  url: /.*
+  schedule: every 90 minutes from 10:00 to 14:00
