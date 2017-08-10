@@ -4,14 +4,59 @@
 body
 {
 	text-align:left;
-	vertical-align:middle;	
+	vertical-align:middle;
 	clear:right;
 }
 </style>
 <head>
 	<title>Breakify</title>
+	<script src="popup.js"></script>
+	<style>
+		#display, #settings {margin-top: 4px;}
+		#modify {margin-bottom: 4px;}
+</style>
+</head>
 <body>
+	<div class="container-fluid">
 
+    <div id="display" class="row-fluid">
+        <div class="span12">
+            <div class="progress progress-striped active progress-success progress-large">
+                <div class="bar" id="bar" style="width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modify" class="row-fluid">
+        <div class="span12">
+            <button id="cancel" class="offset1 btn btn-danger">cancel</button>
+            <button id="resume" class="offset1 btn btn-success">resume</button>
+            <button id="pause" class="offset1 btn btn-warning">pause</button>
+            <button id="restart" class="offset1 btn">restart</button>
+        </div>
+    </div>
+
+    <div id="settings" class="row-fluid">
+        <div class="span12">
+            <form class="well" name="choices">
+                <div class="radio"><input type="radio" name="radio" value="0" checked="checked">
+                <span id="s0">1</span>&nbsp;min</div>
+								<!--for minutes changes: only change int inbetween span tag -->
+
+                <div class="radio"><input type="radio" name="radio" value="1">
+                <span id="s1">5</span>&nbsp;min</div>
+
+                <div class="radio"><input type="radio" name="radio" value="2">
+                <span id="s2">20</span>&nbsp;min</div>
+								<div>&nbsp;</div>
+                <button type="button" id="start" class="btn btn-success">Start</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<div>&nbsp;</div> <!--Break between-->
 <a href="youtube-videos/upbeat.html">
 
 	<img title="Upbeat" style="float:right;" src="happy.png" width=64px height=64px/><br>
@@ -26,7 +71,7 @@ body
 	<img title="Focused" src="focused.png" width=64px height=64px/><br>
 </a>
 <a href="youtube-videos/zen.html">
-	<img title="Zen" src="zen.png" width=64px height=64px/><br>	
+	<img title="Zen" src="zen.png" width=64px height=64px/><br>
 </>
 </body>
 </html>
