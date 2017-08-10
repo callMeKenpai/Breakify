@@ -82,11 +82,11 @@ function getTimeLeftString(){
 function didCreateNotification(notificationId) {}
 
 function ring(){
-   chrome.notifications.create('reminder', {
+   chrome.notifications.create('alarm', {
     type: 'basic',
     iconUrl: 'icon.png',
     title: 'Don\'t forget!',
-    message: 'To rest and look up once in a while'
+    message: 'To rest and look up once in a while, click here to listen to some music depending on your mood.'
  }, didCreateNotification);
 
 	turnOff();
@@ -104,5 +104,5 @@ function turnOff(){
 
 function error()
 {
-	alert("Minutes should be between 1 and 240.");
+	alarm("Minutes should be between 1 and 240.");
 }
