@@ -15,7 +15,7 @@
   },
 	"permissions":
 	[
-		"activateTab",
+		"notifications",
 		"tabs",
   		"bookmarks",
 	  	"http://www.blogger.com/",
