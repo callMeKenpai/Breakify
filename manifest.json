@@ -10,9 +10,12 @@
 		"default_title": "Breakify",
     		"default_popup": "popup.html"
 	},
+  "background": {
+    "scripts": ["background.js"]
+  },
 	"permissions":
 	[
-		"activateTab",
+		"notifications",
 		"tabs",
   		"bookmarks",
 	  	"http://www.blogger.com/",
