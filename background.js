@@ -104,5 +104,5 @@ function turnOff(){
 
 function error()
 {
-	alarm("Minutes should be between 1 and 240.");
+	alert("Minutes should be between 1 and 240.");
 }
