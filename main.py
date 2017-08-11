@@ -9,17 +9,19 @@ import sched, time
 import time
 from datetime import datetime
 
+jinja_environment = jinja2.Environment(
+	loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
+
 class MainHandler(webapp2.RequestHandler):
-    def get(self):
-        self.response.write("Hello world")
-    def job(self):
-        htmlfile = urlib.urlopen("popup.html")
-        htmltext = htmlfile.read()
-        self.response.write(htmlfile)
+	def get(self):
+		template = jinja_environment.get_template('templates/Main.html')
+		self.response.write(template.render())
 
-class SecondHandler(webapp2.RequestHandler):
-    def get(self):
-        self.response.write("Hello world second page")
+class UpbeatHandler(webapp2.RequestHandler):
+	def get(self):
+		template = jinja_environment.get_template('templates/upbeat.html')
+		self.response.write(template.render())
 
-app = webapp2.WSGIApplication([('/', MainHandler),('/second', SecondHandler)],
-    debug = True)
+
+app = webapp2.WSGIApplication([
+	('/', MainHandler),('/upbeat',UpbeatHandler)])

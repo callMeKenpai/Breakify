@@ -5,8 +5,12 @@ api_version: 1
 threadsafe: true
 
 handlers:
+- url: /resources
+  static_dir: resources
 - url: /.*
   script: main.app
+- url: /favicon\.ico
+
 
 
 libraries:
